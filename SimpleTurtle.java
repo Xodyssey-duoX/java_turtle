@@ -685,6 +685,10 @@ public class SimpleTurtle
     g.setColor(infoColor);
     g.drawString(this.toString(),xPos + (int) (width/2),yPos);
   }
+
+
+
+
   
 
   public void polygon(double sides, int size){
@@ -723,6 +727,26 @@ public class SimpleTurtle
     this.forward((int) (size*1.3));
     this.turn(30);
     this.forward(size);
+  }
+
+  public void asterisk(int size){
+    this.setPenWidth(size/3);
+    for(int i=0; i<3; i++){
+      this.forward(size);
+      this.penUp();
+      this.backward(size/2);
+      this.turn(60);
+      this.backward(size/2);
+      this.penDown();
+    }
+  }
+
+  public void beacon(int width, int size){
+    this.setPenWidth(width);
+    for(int i=size; i>1; i-=width){
+      this.forward(i);
+      this.turnRight();
+    }
   }
 
 
