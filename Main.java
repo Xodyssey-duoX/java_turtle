@@ -3,7 +3,6 @@ import java.awt.event.*;
 import java.util.*;
 import java.awt.*;
 
-
 public class Main {
   public static void main(String[] args) {  
     World world = new World(1000,1000);
@@ -42,6 +41,21 @@ public class Main {
     gertle.asterisk(100);
     jertle.beacon(3,200);
   
+
+    aertle.setName("aertle");
+    certle.setName("certle");
+    gertle.setName("gertle");
+    jertle.setName("jertle");
+
+    aertle.data("star");
+    certle.data("smiley");
+    gertle.data("asterisk");
+    jertle.data("beacon");
+    // certle.name = "certle";
+    // gertle.name = "gertle";
+    // jertle.name = "jertle";
+
+
     // //world.setVisible(true);
 
     // World world2 = new World(true);
