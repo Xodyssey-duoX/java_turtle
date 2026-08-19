@@ -28,7 +28,7 @@ public class SimpleTurtle
   private static int numTurtles = 0;
   
   /** array of colors to use for the turtles */
-  private static Color[] colorArray = { Color.cyan, Color.magenta, new Color(200,200,200), Color.black};
+  private static Color[] colorArray = { Color.cyan, new Color(173,0,255), Color.magenta, new Color(225,150,50)};
   
   /** who to notify about changes to this turtle */
   private ModelDisplay modelDisplay = null;
@@ -70,7 +70,7 @@ public class SimpleTurtle
   private boolean showInfo = false;
   
   /** the name of this turtle */
-  private String name = "No name";
+  private String name;
   
   ////////////////// constructors ///////////////////
   
@@ -419,7 +419,9 @@ public class SimpleTurtle
    * Method to get the name of the turtle
    * @return the name of this turtle
    */
-  public String getName() { return this.name; }
+  public String getName() { 
+    return this.name;
+  }
   
   /**
    * Method to set the name of the turtle
@@ -685,11 +687,12 @@ public class SimpleTurtle
     g.setColor(infoColor);
     g.drawString(this.toString(),xPos + (int) (width/2),yPos);
   }
-
-
-
-
   
+
+
+
+
+
 
   public void polygon(double sides, int size){
     for(int i=0; i<sides; i++){
@@ -748,8 +751,13 @@ public class SimpleTurtle
       this.turnRight();
     }
   }
-
-
+  
+  public void data(String shape){
+    System.out.println(this.getName());
+    System.out.println("\t Color: " + this.getPenColor());
+    System.out.println("\t Shape: " + shape);
+    System.out.println("\t Distance: " + this.getDistance(0,0));
+  }
 
   /**
    * Method to return a string with informaiton 
